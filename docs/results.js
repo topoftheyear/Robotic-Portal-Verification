@@ -15,7 +15,6 @@ window.onload = function(){
     var result = "<br>";
     for (var i = 0; i < length; i++){
         name = cookiearray[i].split('=')[0];
-        console.log(name);
         
         value = cookiearray[i].split('=')[1];
         value = AttemptParse(value);

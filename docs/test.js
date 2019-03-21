@@ -57,7 +57,20 @@ window.onload = function (){
             }*/
             
             // Medicare Beneficiary Identifier verification
-            if (!(medicare != null && medicare != "" && medicare === data[i].BenMBI)){
+            if (!(medicare != null && medicare === data[i].BenMBI)){
+                alert("failure: " + medicare);
+                continue;
+            }
+            
+            // Name Verification
+            var name = data[i].BenName.split(" ");
+            if (!(first != null && first.toLowerCase() === name[0].toLowerCase())){
+                alert("failure: " + first);
+                continue;
+            }
+            
+            if (!(last != null && last.toLowerCase() === name[name.length - 1].toLowerCase())){
+                alert("failure: " + last);
                 continue;
             }
             

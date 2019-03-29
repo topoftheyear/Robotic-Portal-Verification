@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="../test.js"></script>
+    <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            margin-left: 40px;
+        }
+        .auto-style2 {
+            margin-left: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div align=left-side>
+        <p>
+            Program:<select id="ProgramOption" name="D12">
+                <option>A</option>
+                <option>B</option>
+                <option>JD DME</option>
+                <option>JA DME</option>
+            </select></p>
+        <p>
+            TIN or SSN:
+            <input id="TINSSNText" type="text" /> multiple</p>
+        <p>
+            NPI:
+            <input id="NPIText" type="text" /> multiple</p>
+        <p>
+            PTAN:&nbsp;
+            <input id="PTANText" type="text" />multiple</p>
+        <p>
+            Program:&nbsp;
+            <input id="ProgramText" type="text" />multiple</p>
+    </div>
+    <p>
+        Medicare Number:
+        <input id="MedicareText" type="text" />15, 78</p>
+    <p>
+        Last Name:
+        <input id="LastNameText" type="text" />15</p>
+    <p>
+        First Name:
+        <input id="FirstNameText" type="text" />15</p>
+    <p>
+        Date of Birth: 
+        <input id="DOBText" type="date" name="bday">15</p>
+    <p>
+        Optional Details 15</p>
+    <p class="auto-style1">
+        &nbsp;<input id="DOSRadio1" checked="false" name="DOSRadio" type="radio" value="0" />Date of service 09/11/2017 through 01/11/2019</p>
+    <p class="auto-style1">
+        &nbsp;<input id="DOSRadio2" checked="false" name="DOSRadio" type="radio" value="1" aria-disabled="True" formmethod="get" />Date of service 09/11/2018</p>
+    <p class="auto-style1">
+        &nbsp;<input id="DOSRadio3" checked="false" name="DOSRadio" type="radio" value="2" />Provide date of service below</p>
+    <p class="auto-style1">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; From Date: &nbsp;<input id="FromDateText" type="date" name="bday5">15,82,98</p>
+    <p class="auto-style1">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To Date: &nbsp;<input id="ToDateText" type="date" name="bday6">15,82,98</p>
+    <p>
+        Generic Results Field:
+            <input id="ResultsText1" type="text" />results</p>
+    <p>
+        Adjustment Type:
+            <select id="AdjustmentTypeOption" name="D6">
+                <option value="option 1">Billed Amount</option>
+                <option value="option 2">Billed in Error</option>
+            </select> 52</p>
+    <p>
+        Selecting Claims:<input id="ClaimCheckbox1" type="checkbox" /><input id="ClaimCheckbox2" type="checkbox" /><input id="ClaimCheckbox3" type="checkbox" /> 52, 73</p>
+    <p>
+        Procedure Code: <input id="ProcedureText" type="text" /> 53</p>
+    <p>
+        Billed Amount: <input id="BilledAmountText" type="text" />&nbsp; 53</p>
+    <p>
+        <input id="AgreementCheckbox" type="checkbox" />Some agreement text.&nbsp; 54, 74</p>
+    <p>
+        Document Description:
+        <input id="DocDescText" type="text" />62, 104</p>
+    <p<form action="upload.php" method="post" enctype="multipart/form-data">
+    Select file to upload: <input type="file" name="fileToUpload" id="fileToUpload">
+    <input type="submit" value="Upload Image" name="submitFile"> 62, 75, 104&nbsp;<p>
+        CID: 
+            <input id="CIDText" type="text" />65</p>
+    <p>
+        Type of Request:&nbsp;&nbsp;&nbsp;
+        <input id="TypeOfRequestRadio1" checked="true" name="TypeOfRequestRadio" type="radio" value="0" />Redetermination&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input id="TypeOfRequestRadio2" checked="true" name="TypeOfRequestRadio" type="radio" value="1" />Reopening&nbsp; 71</p>
+    <p>
+        Will a review cause overpayment:&nbsp;&nbsp;&nbsp;
+        <input id="YesRadio1" checked="true" name="YesNoRadio1" type="radio" value="0" />Yes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input id="NoRadio1" checked="true" name="YesNoRadio1" type="radio" value="1" />No&nbsp; 71</p>
+    <p>
+        Is this request the result of an overpayment:&nbsp;&nbsp;&nbsp;
+        <input id="YesRadio2" checked="true" name="YesNoRadio2" type="radio" value="0" />Yes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input id="NoRadio2" checked="true" name="YesNoRadio2" type="radio" value="1" />No&nbsp; 71</p>
+    <p class="auto-style1">
+        If Yes, the following fields are required:</p>
+    <p class="auto-style2">
+        who initiated overpayment:&nbsp;
+        <input id="WhoOverText" type="text" /> </p>
+    <p class="auto-style2">
+        AR Number:&nbsp;
+        <input id="ARText" type="text" /> </p>
+    <p>
+        &nbsp;</p>
+    <p>
+        Street:
+        <input id="StreetText" type="text" /> 72</p>
+    <p>
+        City:
+        <input id="CityText" type="text" /> 72</p>
+    <p>
+        State:
+        <select id="StateSelect" name="D7">
+            <option>ND</option>
+            <option>MN</option>
+        </select> 72</p>
+    <p>
+        Zip:<input id="ZipText" type="text" /> 72</p>
+    <p>
+        Signatory Name:
+        <input id="SignNameText" type="text" /> 74</p>
+    <p>
+        Appeal Status:
+        <input id="AppealStatusText" type="text" /> 78, not sure if should be dropdown</p>
+    <p>
+        Confirmation #:
+        <input id="ConfNumText" type="text" /> 78</p>
+    <p>
+        Check Amount:
+        <input id="CheckAmountText" type="text" /> 82</p>
+    <p>
+        Check Number:
+        <input id="CheckNumberText" type="text" /> 82</p>
+    <p>
+        ICN/DCN/CCN:
+            <input id="IcnDcnCcnText" type="text" />85</p>
+    <p>
+        HICN:
+            <input id="HICNText" type="text" />85</p>
+    <p>
+        Financial Year:
+            <input id="FinYearText" type="text" />92</p>
+    <p>
+        Enrollment Type:&nbsp;&nbsp;&nbsp;
+        <input id="EnrollTypeRadio1" checked="true" name="EnrollTypeRadio" type="radio" value="0" />Individual&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input id="EnrollTypeRadio2" checked="true" name="EnrollTypeRadio" type="radio" value="1" />Organization&nbsp; 98</p>
+    <p>
+        Application/Reference Number:
+            <input id="AppRefNumText" type="text" />98</p>
+    <p>
+        Web Tracking ID:
+            <input id="WebTrackIDText" type="text" />98</p>
+    <p>
+        Delegate User:
+        <select id="UserSelect" name="D8">
+            <option>User 1</option>
+            <option>User 2</option>
+        </select>108</p>
+    <p>
+        Topic:<select id="TopicSelect" name="D9">
+            <option>Topic 1</option>
+            <option>Topic 2</option>
+        </select>&nbsp;&nbsp;&nbsp; Sub
+        Topic:<select id="SubTopicSelect" name="D10">
+            <option>Topic 1</option>
+            <option>Topic 2</option>
+        </select>&nbsp;&nbsp;&nbsp;&nbsp; Status:<select id="StatusSelect" name="D11">
+            <option>Open</option>
+            <option>Closed</option>
+        </select> 109,110</p>
+    <p>
+        FCN:
+            <input id="FCNText" type="text" /></p>
+    <p>
+        &nbsp;</p>
+    <p>
+        <input id="SubmitButton" type="button" value="Submit" /></p>
+</body>
+</html>

@@ -1,4 +1,4 @@
-debug = true;
+debug = false;
 
 window.onload = function (){
     var data = [{TIN:       123456789, 
@@ -11,7 +11,7 @@ window.onload = function (){
                 BenSSN:     123456789, 
                 ICN:        123456789123456, 
                 FCN:        12345678912345,
-                BenDOS:     "01/01/0001",
+                BenDOS:     "01/01/2000",
                 Program:    "A",
                 Comment:    "Help I can't find my wallet."},
                 
@@ -39,7 +39,7 @@ window.onload = function (){
                 BenSSN:     111111111, 
                 ICN:        123456789123456, 
                 FCN:        11111111111111, 
-                BenDOS:     "01/01/0001",
+                BenDOS:     "09/11/2018",
                 Program:    "JA DME",
                 Comment:    "I’ll have two number 9s, a number 9 large, a number 6 with extra dip, a number 7, two number 45s, one with cheese, and a large soda."},
                 
@@ -69,7 +69,7 @@ window.onload = function (){
         var last        = AttemptElement("LastNameText");   
         var first       = AttemptElement("FirstNameText");
         var dateBirth   = AttemptElement("DOBText");
-        var dateService = AttemptElement("DOSRadio");
+        var dateService = AttemptRadio("DOSRadio");
         var icn         = AttemptElement("IcnDcnCcnText");
         var fcn         = AttemptElement("FCNText");
         var hicn        = AttemptElement("HICNText");
@@ -148,8 +148,9 @@ window.onload = function (){
             
             // Date of Service verification
             if (dateService != null){
-                if (dateService === 0){
-                    var current = Date.parse(dateService);
+                if (dateService == 0){
+                    aler(dateService);
+                    var current = Date.parse(data[i].BenDOS);
                     var earliest = Date.parse("09/11/2017");
                     var latest = Date.parse("01/11/2019");
                     
@@ -158,20 +159,23 @@ window.onload = function (){
                         continue;
                     }
                 }
-                else if (dateService === 1){
-                    if (!(dateService === "09/11/2018")){
+                else if (dateService == 1){
+                    aler(dateService);
+                    if (!(data[i].BenDOS === "09/11/2018")){
                         aler("failure: 1:" + dateService);
                         continue;
                     }
                 }
-                else if (dateService === 2){
-                    var current = Date.parse(dateService);
-                    var earliest = Date.parse(AttemptElement("FromDatetext"));
-                    var latest = Date.parse(AttemptElement("ToDatetext"));
+                else if (dateService == 2){
+                    aler(dateService);
+                    var current = Date.parse(data[i].BenDOS);
+                    var earliest = Date.parse(AttemptElement("FromDateText"));
+                    var latest = Date.parse(AttemptElement("ToDateText"));
+                    aler(earliest + " " + latest);
                     
                     // If the "provide date os service below option is selected yet
                     // the date text boxes are not filled, provide a failure
-                    if (earliest == null || earliest == '' || latest == null || latest == null){
+                    if (earliest == null || earliest == NaN || earliest == '' || latest == null || latest == NaN || latest == null){
                         aler("failure: 2a:" + dateService);
                         continue;
                     }
@@ -217,6 +221,17 @@ function AttemptElement(check){
     var temp;
     try{
         temp = ReadValue(document.getElementById(check));
+    }
+    catch(e){
+        temp = null;
+    }
+    return temp;
+}
+
+function AttemptRadio(check){
+    var temp;
+    try{
+        temp = ReadValue(document.querySelector('input[name="' + check + '"]:checked'));
     }
     catch(e){
         temp = null;

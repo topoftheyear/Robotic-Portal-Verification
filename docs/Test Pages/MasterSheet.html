@@ -15,9 +15,14 @@
 <body>
     <div align=left-side>
         <p>
-            <strong>A&amp;B Functionality</strong></p>
+            Program:<select id="ProgramOption" name="D12">
+                <option>A</option>
+                <option>B</option>
+                <option>JD DME</option>
+                <option>JA DME</option>
+            </select></p>
         <p>
-            &nbsp;TIN or SSN:
+            TIN or SSN:
             <input id="TINSSNText" type="text" /> multiple</p>
         <p>
             NPI:
@@ -25,9 +30,6 @@
         <p>
             PTAN:&nbsp;
             <input id="PTANText" type="text" />multiple</p>
-        <p>
-            Program:&nbsp;
-            <input id="ProgramText" type="text" />multiple</p>
     </div>
     <p>
         Medicare Number:
@@ -44,18 +46,18 @@
     <p>
         Optional Details 15</p>
     <p class="auto-style1">
-        &nbsp;<input id="DOSRadio1" checked="false" name="DOSRadio" type="radio" value="V1" />Date of service 09/11/2017 through 01/11/2019</p>
+        &nbsp;<input id="DOSRadio1" checked="false" name="DOSRadio" type="radio" value="0" />Date of service 09/11/2017 through 01/11/2019</p>
     <p class="auto-style1">
-        &nbsp;<input id="DOSRadio2" checked="false" name="DOSRadio" type="radio" value="V1" aria-disabled="True" formmethod="get" />Date of service 09/11/2018</p>
+        &nbsp;<input id="DOSRadio2" checked="false" name="DOSRadio" type="radio" value="1" aria-disabled="True" formmethod="get" />Date of service 09/11/2018</p>
     <p class="auto-style1">
-        &nbsp;<input id="DOSRadio3" checked="false" name="DOSRadio" type="radio" value="V1" />Provide date of service below</p>
+        &nbsp;<input id="DOSRadio3" checked="false" name="DOSRadio" type="radio" value="2" />Provide date of service below</p>
     <p class="auto-style1">
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; From Date: &nbsp;<input id="FromDateText" type="date" name="bday5">15,82,98</p>
     <p class="auto-style1">
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To Date: &nbsp;<input id="ToDateText" type="date" name="bday6">15,82,98</p>
     <p>
         Generic Results Field:
-        <input id="ResultsText1" aria-disabled="True" disabled="disabled" type="text" />results</p>
+            <input id="ResultsText1" type="text" />results</p>
     <p>
         Adjustment Type:
             <select id="AdjustmentTypeOption" name="D6">
@@ -73,19 +75,20 @@
     <p>
         Document Description:
         <input id="DocDescText" type="text" />62, 104</p>
-    <p<form action="upload.php" method="post" enctype="multipart/form-data">
+    <form action="upload.php" method="post" enctype="multipart/form-data">
     Select file to upload: <input type="file" name="fileToUpload" id="fileToUpload">
     <input type="submit" value="Upload Image" name="submitFile"> 62, 75, 104&nbsp;<p>
-        CID: <input id="CIDText" aria-disabled="True" disabled="disabled" type="text" />65</p>
+        CID: 
+            <input id="CIDText" type="text" />65</p></form>
     <p>
         Type of Request:&nbsp;&nbsp;&nbsp;
-        <input id="TypeOfRequestRadio1" checked="true" name="TypeOfRequestRadio" type="radio" value="V1" />Redetermination&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input id="TypeOfRequestRadio2" checked="true" name="TypeOfRequestRadio" type="radio" value="V1" />Reopening&nbsp; 71</p>
+        <input id="TypeOfRequestRadio1" checked="true" name="TypeOfRequestRadio" type="radio" value="0" />Redetermination&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input id="TypeOfRequestRadio2" checked="true" name="TypeOfRequestRadio" type="radio" value="1" />Reopening&nbsp; 71</p>
     <p>
         Will a review cause overpayment:&nbsp;&nbsp;&nbsp;
-        <input id="YesRadio1" checked="true" name="YesNoRadio1" type="radio" value="V1" />Yes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input id="NoRadio1" checked="true" name="YesNoRadio1" type="radio" value="V1" />No&nbsp; 71</p>
+        <input id="YesRadio1" checked="true" name="YesNoRadio1" type="radio" value="0" />Yes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input id="NoRadio1" checked="true" name="YesNoRadio1" type="radio" value="1" />No&nbsp; 71</p>
     <p>
         Is this request the result of an overpayment:&nbsp;&nbsp;&nbsp;
-        <input id="YesRadio2" checked="true" name="YesNoRadio2" type="radio" value="V1" />Yes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input id="NoRadio2" checked="true" name="YesNoRadio2" type="radio" value="V1" />No&nbsp; 71</p>
+        <input id="YesRadio2" checked="true" name="YesNoRadio2" type="radio" value="0" />Yes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input id="NoRadio2" checked="true" name="YesNoRadio2" type="radio" value="1" />No&nbsp; 71</p>
     <p class="auto-style1">
         If Yes, the following fields are required:</p>
     <p class="auto-style2">
@@ -136,7 +139,7 @@
             <input id="FinYearText" type="text" />92</p>
     <p>
         Enrollment Type:&nbsp;&nbsp;&nbsp;
-        <input id="EnrollTypeRadio1" checked="true" name="EnrollTypeRadio" type="radio" value="V1" />Individual&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input id="EnrollTypeRadio2" checked="true" name="EnrollTypeRadio" type="radio" value="V1" />Organization&nbsp; 98</p>
+        <input id="EnrollTypeRadio1" checked="true" name="EnrollTypeRadio" type="radio" value="0" />Individual&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input id="EnrollTypeRadio2" checked="true" name="EnrollTypeRadio" type="radio" value="1" />Organization&nbsp; 98</p>
     <p>
         Application/Reference Number:
             <input id="AppRefNumText" type="text" />98</p>
@@ -161,6 +164,9 @@
             <option>Open</option>
             <option>Closed</option>
         </select> 109,110</p>
+    <p>
+        FCN:
+            <input id="FCNText" type="text" /></p>
     <p>
         &nbsp;</p>
     <p>

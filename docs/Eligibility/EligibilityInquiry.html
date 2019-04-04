@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <script src="../test.js"></script>
+    <script src="../main.js"></script>
     <title></title>
     <style type="text/css">
         .auto-style1 {
@@ -15,16 +15,21 @@
             Provider/Supplier Details</p>
         <p style="margin-left: 40px">
             TIN or SSN:
-            <input id="TINSSNoption" type="text" /></p>
+            <input id="TINSSNText" type="text" /></p>
         <p style="margin-left: 40px">
             NPI:
-            <input id="NPIoption" type="text" /></p>
+            <input id="NPIText" type="text" /></p>
         <p style="margin-left: 40px">
             PTAN:&nbsp;
-            <input id="PTANoption" type="text" /></p>
+            <input id="PTANText" type="text" /></p>
         <p class="auto-style1">
             Program:&nbsp;
-            <input id="Programoption" type="text" /></p>
+            <select id="ProgramOption" name="D12">
+                <option>A</option>
+                <option>B</option>
+                <option>JD DME</option>
+                <option>JA DME</option>
+            </select></p>
         <p class="auto-style1">
             <input id="Button4" type="button" value="View my Provider/Supplier Combinations" /></p>
     </div>
@@ -32,34 +37,34 @@
         Beneficiary Details</p>
     <p style="margin-left: 40px">
         Medicare Number:
-        <input id="Medicaretext" type="text" /></p>
+        <input id="MedicareText" type="text" /></p>
     <p class="auto-style1">
         Last Name:
-        <input id="Lasttext" type="text" /></p>
+        <input id="LastNameText" type="text" /></p>
     <p style="margin-left: 40px">
         <input id="Button1" type="button" value="Clear Beneficiary Details" /></p>
     <p>
         Provide at least one of the following:</p>
     <p style="margin-left: 40px">
         First Name:
-        <input id="Firsttext" type="text" /></p>
+        <input id="FirstNameText" type="text" /></p>
     <p style="margin-left: 40px">
         Date of Birth: 
-        <input id="Datetext" type="date" name="bday"></p>
+        <input id="DOBText" type="date" name="bday"></p>
     <p>
         Optional Details</p>
     <p class="auto-style1">
-        &nbsp;<input id="Radio1" checked="false" name="R1" type="radio" value="V1" />Date of service 09/11/2017 through 01/11/2019</p>
+        &nbsp;<input id="DOSRadio1" checked="false" name="DOSRadio" type="radio" value="0" />Date of service 09/11/2017 through 01/11/2019</p>
     <p class="auto-style1">
-        &nbsp;<input id="Radio2" checked="false" name="R1" type="radio" value="V1" aria-disabled="True" formmethod="get" />Date of service 09/11/2018</p>
+        &nbsp;<input id="DOSRadio2" checked="false" name="DOSRadio" type="radio" value="1" aria-disabled="True" formmethod="get" />Date of service 09/11/2018</p>
     <p class="auto-style1">
-        &nbsp;<input id="Radio3" checked="false" name="R1" type="radio" value="V1" />Provide date of service below</p>
+        &nbsp;<input id="DOSRadio3" checked="false" name="DOSRadio" type="radio" value="2" />Provide date of service below</p>
     <p class="auto-style1">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; From Date: &nbsp;<input type="date" name="bday0"></p>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; From Date: &nbsp;<input id="FromDateText" type="date" name="bday5"></p>
     <p class="auto-style1">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To Date: &nbsp;<input type="date" name="bday1"></p>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To Date: &nbsp;<input id="ToDateText" type="date" name="bday6"></p>
     <p>
-        <input id="SubmitButton" type="button" value="Submit Inquiry" /><input id="Button3" type="button" value="Clear Form" /></p>
+        <input id="SubmitButton" type="button" value="Submit" /><input id="Button3" type="button" value="Clear Form" /></p>
     <p>
         &nbsp;</p>
 </body>

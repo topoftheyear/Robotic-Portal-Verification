@@ -92,35 +92,35 @@ window.onload = function (){
         for (var i = 0; i < data.length; i++){
             // TIN and SSN verification
             if (tinssn != null && (!(tinssn === data[i].TIN || tinssn == data[i].BenSSN))){
-                aler("failure: " + tinssn + "\n" + 
+                aler("TIN failure: " + tinssn + "\n" + 
                         tinssn + " " + data[i].TIN + " " + data[i].BenSSN);
                 continue;
             }
             
             // NPI verification
             if (npi != null && !(npi == data[i].NPI)){
-                aler("failure: " + npi + "\n" + 
+                aler("NPI failure: " + npi + "\n" + 
                         npi + " " + data[i].NPI);
                 continue;
             }
             
             // PTAN verification
             if (ptan != null && !(ptan === data[i].PTAN)){
-                aler("failure: " + ptan + "\n" +
+                aler("PTAN failure: " + ptan + "\n" +
                         ptan + " " + data[i].PTAN);
                 continue;
             }
             
             // Program verification
             if (program != null && !(program === data[i].Program)){
-                aler("failure: " + program + "\n" +
+                aler("Program failure: " + program + "\n" +
                         program + " " + data[i].Program);
                 continue;
             }
             
             // Medicare Beneficiary Identifier verification
             if (medicare != null && !(medicare === data[i].BenMBI)){
-                aler("failure: " + medicare + "\n" +
+                aler("MBI failure: " + medicare + "\n" +
                         medicare + " " + data[i].BenMBI);
                 continue;
             }
@@ -128,20 +128,20 @@ window.onload = function (){
             // Name verification
             var name = data[i].BenName.split(" ");
             if (first != null && !(first.toLowerCase() == name[0].toLowerCase())){
-                aler("failure: " + first + "\n" +
+                aler("First Name failure: " + first + "\n" +
                         first + " " + name[0]);
                 continue;
             }
             
             if (last != null && !(last.toLowerCase() == name[name.length - 1].toLowerCase())){
-                aler("failure: " + last + "\n" +
+                aler("Last Name failure: " + last + "\n" +
                         last + " " + name[name.length - 1]);
                 continue;
             }
             
             // Date of Birth verification
             if (dateBirth != null && !(dateBirth == data[i].BenDOB)){
-                aler("failure: " + dateBirth + "\n" +
+                aler("DOB failure: " + dateBirth + "\n" +
                         dateBirth + " " + data[i].BenDOB);
                 continue;
             }
@@ -155,14 +155,14 @@ window.onload = function (){
                     var latest = Date.parse("01/11/2019");
                     
                     if (!(earliest <= current && current <= latest)){
-                        aler("failure: 0:" + dateService);
+                        aler("DOS failure: 0:" + dateService);
                         continue;
                     }
                 }
                 else if (dateService == 1){
                     aler(dateService);
                     if (!(data[i].BenDOS === "09/11/2018")){
-                        aler("failure: 1:" + dateService);
+                        aler("DOS failure: 1:" + dateService);
                         continue;
                     }
                 }
@@ -176,12 +176,12 @@ window.onload = function (){
                     // If the "provide date os service below option is selected yet
                     // the date text boxes are not filled, provide a failure
                     if (earliest == null || earliest == NaN || earliest == '' || latest == null || latest == NaN || latest == null){
-                        aler("failure: 2a:" + dateService);
+                        aler("DOS failure: 2a:" + dateService);
                         continue;
                     }
                     
                     if (!(earliest <= current && current <= latest)){
-                        aler("failure: 2b:" + dateService);
+                        aler("DOS failure: 2b:" + dateService);
                         continue;
                     }
                 }
@@ -189,21 +189,21 @@ window.onload = function (){
             
             // ICN verification
             if (icn != null && !(icn == data[i].ICN)){
-                aler("failure: " + icn + "\n" +
+                aler("ICN failure: " + icn + "\n" +
                         icn + " " + data[i].ICN);
                 continue;
             }
             
             // HICN verification
             if (hicn != null && !(hicn == data[i].BenHICN)){
-                aler("failure: " + hicn + "\n" +
+                aler("HICN failure: " + hicn + "\n" +
                         hicn + " " + data[i].BenHICN);
                 continue;
             }
             
             // FCN verification
             if (fcn != null && !(fcn == data[i].FCN)){
-                aler("failure: " + fcn + "\n" +
+                aler("FCN failure: " + fcn + "\n" +
                         fcn + " " + data[i].FCN);
                 continue;
             }

@@ -9,7 +9,9 @@ window.onload = function(){
         length = 0;
     }
     
-    document.writeln("Results found: " + length + "<br>");
+    document.writeln('<head><link rel="stylesheet" type="text/css" href="format.css"></head>');
+    
+    document.writeln("<p>Results found: " + length + "<br><p>");
     
     // Read through all cookies and display them to the page
     var result = "<br>";
@@ -20,8 +22,7 @@ window.onload = function(){
         value = AttemptParse(value);
         
         // Adds results to their own table (don't look its gross)
-        result += '<div align="justify">';
-        result += "Person:<br>";
+        result += '<div>';
         result += '<table style="width:50%;">';
         for (var key in value){
             result += '<tr>';
@@ -38,7 +39,7 @@ window.onload = function(){
         eraseCookie(name);
     }
     
-    document.writeln(result);
+    document.writeln(result + "<p>");
     
     // Add button to window that returns user to index.html when clicked
     var menuButton =    '<br><input type="button" value="Main Menu" onclick="ReturnToMain()" />' +

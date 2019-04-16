@@ -1,0 +1,18 @@
+
+body{
+    font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif !important;
+    background-color: lightgray !important;
+    outline-style: double !important;
+    outline-width: medium !important;
+    outline-color: navy !important;
+}
+
+p, table{
+    color: black !important;
+    font-weight: 700 !important;
+    padding: 10px !important;
+    text-align: justify !important;
+    width: 30% !important;
+    margin: auto !important;
+    position: relative !important;
+}

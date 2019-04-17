@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<script src="../main.js"></script>
+	<title></title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="../format.css">
+</head>
+<form>
+	<body>
+
+		<div align=left-side>
+			<p>
+				Provider/Supplier Details
+			</p>
+			<p style="margin-left: 40px">
+				TIN or SSN:
+				<input id="TINSSNText" type="text" />
+			</p>
+			<p style="margin-left: 40px">
+				NPI:
+				<input id="NPIText" type="text" />
+			</p>
+			<p style="margin-left: 40px">
+				PTAN:&nbsp;
+				<input id="PTANText" type="text" />
+			</p>
+			<p class="auto-style1">
+				Program:&nbsp;
+				<select id="ProgramOption" name="D12">
+					<option>A</option>
+					<option>B</option>
+					<option>JD DME</option>
+					<option>JA DME</option>
+				</select>
+			</p>
+		</div>
+
+		<p>
+			Search Criteria:
+		</p>
+		<p>
+			Financial Year:
+			<input type="date" name="FinacialYear" min="2000-01-02"><br><br>
+		</p>
+		<p>
+			&nbsp;
+		</p>
+		<p>
+			<input id="SubmitButton" type="button" value="Submit" /><input type="reset" value="Clear Form" />
+		</p>
+
+	</body>
+</form>
+</html>

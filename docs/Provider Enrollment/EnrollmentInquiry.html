@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<script src="../main.js"></script>
+	<title></title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="../format.css">
+</head>
+<form>
+	<body>
+
+		<div align=left-side>
+			<p>
+				Provider/Supplier Details
+			</p>
+			<p style="margin-left: 40px">
+				TIN or SSN:
+				<input id="TINSSNText" type="text" />
+			</p>
+			<p style="margin-left: 40px">
+				NPI:
+				<input id="NPIText" type="text" />
+			</p>
+			<p style="margin-left: 40px">
+				PTAN:&nbsp;
+				<input id="PTANText" type="text" />
+			</p>
+			<p class="auto-style1">
+				Program:&nbsp;
+				<select id="ProgramOption" name="D12">
+					<option>A</option>
+					<option>B</option>
+					<option>JD DME</option>
+					<option>JA DME</option>
+				</select>
+			</p>
+			<p class="auto-style1">
+				<input id="Button4" type="button" value="View my Provider/Supplier Combinations" />
+			</p>
+		</div>
+		<p>
+			Application Details
+		</p>
+		<p>
+			Enrollment Type:
+			&nbsp;<input id="DOSRadio1" checked="false" name="DOSRadio" type="radio" value="0" style="width: 20px" />Individual
+			<input id="DOSRadio2" checked="false" name="DOSRadio" type="radio" value="1" aria-disabled="True" formmethod="get" />Organization
+		</p>
+		<p style="margin-left: 40px">
+			Application/ReferenceNumber:
+			<input id="NPIText" type="text" />
+		</p>
+		<p class="auto-style1">
+			Web Tracking ID:
+			<input id="NPIText" type="text" />
+		</p>
+		<p>
+			Date Recieved
+		</p>
+		<p class="auto-style1">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; From Date: &nbsp;<input id="FromDateText" type="date" name="bday5">
+		</p>
+		<p class="auto-style1">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To Date: &nbsp;<input id="ToDateText" type="date" name="bday6">
+		</p>
+		<p>
+<p>
+			<input id="SubmitButton" type="button" value="Submit" /><input type="reset" value="Clear Form" />
+		</p>
+		<p>
+			&nbsp;
+		</p>
+
+	</body>
+</form>
+</html>

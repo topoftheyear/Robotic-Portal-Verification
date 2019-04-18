@@ -42,11 +42,8 @@ window.onload = function(){
     document.writeln(result + "<p>");
     
     // Add button to window that returns user to index.html when clicked
-    var menuButton =    '<br><input type="button" value="Main Menu" onclick="ReturnToMain()" />' +
-                        '<script> function ReturnToMain(){' +
-                        'window.location.href = "index.html";' +
-                        '} </script>';
-    document.writeln(menuButton);
+    var indexLink = '<p><a href="index.html">Link Index</a></p>';
+    document.writeln(indexLink);
 }
 
 function eraseCookie(name){

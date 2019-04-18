@@ -1,4 +1,4 @@
-window.onload = function(){
+window.ontoad = function(){
     // Reads in cookie and splits it apart
     var allcookies = document.cookie;
     cookiearray = allcookies.split(';');
@@ -42,8 +42,8 @@ window.onload = function(){
     document.writeln(result + "<p>");
     
     // Add button to window that returns user to index.html when clicked
-    var indexLink = '<p><a href="index.html">Link Index</a></p>';
-    document.writeln(indexLink);
+    //var indexLink = '<p><a href="index.html">Link Index</a></p>';
+    //document.writeln(indexLink);
 }
 
 function eraseCookie(name){

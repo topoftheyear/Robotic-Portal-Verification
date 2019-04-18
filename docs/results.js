@@ -1,4 +1,4 @@
-window.ontoad = function(){
+window.onload = function(){    
     // Reads in cookie and splits it apart
     var allcookies = document.cookie;
     cookiearray = allcookies.split(';');
@@ -9,9 +9,7 @@ window.ontoad = function(){
         length = 0;
     }
     
-    document.writeln('<head><link rel="stylesheet" type="text/css" href="format.css"></head>');
-    
-    document.writeln("<p>Results found: " + length + "<br><p>");
+    document.getElementsByTagName('BODY')[0].innerHTML += ("<p>Results found: " + length + "<br><p>");
     
     // Read through all cookies and display them to the page
     var result = "<br>";
@@ -39,11 +37,11 @@ window.ontoad = function(){
         eraseCookie(name);
     }
     
-    document.writeln(result + "<p>");
+    document.getElementsByTagName('BODY')[0].innerHTML += (result + "<p>");
     
     // Add button to window that returns user to index.html when clicked
     //var indexLink = '<p><a href="index.html">Link Index</a></p>';
-    //document.writeln(indexLink);
+    //document.getElementsByTagName('BODY')[0].innerHTML += indexLink;
 }
 
 function eraseCookie(name){
